@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--Nav-Bar-->
+    <nav>
+      <div>
+        <img class="logo" src="img/Logo1.png" alt="Revou-logo" />
+      </div>
+
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/">Our Profile</a></li>
+        <li><a href="/">Achievement</a></li>
+        <li><a href="/">Message Us</a></li>
+      </ul>
+
+      <div class="menu-toggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle input");
+
+      const nav = document.querySelector("nav ul");
+
+      menuToggle.addEventListener("click", function () {
+        nav.classList.toggle("slide");
+      });
+    </script>
+
+    <!--Banner-->
+    <main class="main-content">
+      <h2 class="text">Hi <span id="nama"></span>, Welcome to My Website</h2>
+      <script>
+        var nama = prompt("masukkan nama anda");
+        document.getElementById("nama").innerText = nama;
+      </script>
+      <p class="text">Ini adalah website latihan pertama</p>
+      <div class="banner"></div>
+    </main>
+
+    <div class="fasil">
+      <h2>Our Fasilitation</h2>
+      <div style="display: flex; gap: 80px" class="fasil-content">
+        <div style="display: flex; flex-direction: column">
+          <img
+            src="img/guru.png"
+            style="border-radius: 50%; width: 150px; height: 150px"
+          />
+          <span style="align-self: center; font-size: 126%; padding-top: 8px"
+            >Professional</span
+          >
+          <span style="align-self: center; font-size: 126%">Teacher</span>
+        </div>
+        <div style="display: flex; flex-direction: column">
+          <img
+            src="img/field.jpg"
+            style="border-radius: 50%; width: 150px; height: 150px"
+          />
+          <span style="align-self: center; font-size: 126%; padding-top: 8px"
+            >Sport Field</span
+          >
+        </div>
+        <div style="display: flex; flex-direction: column">
+          <img
+            src="img/room.png"
+            style="border-radius: 50%; width: 150px; height: 150px"
+          />
+          <span style="align-self: center; font-size: 126%; padding-top: 8px"
+            >Classroom</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="tutup"></div>
+
+    <!--Message Us-->
+    <section class="message">
+      <div class="container">
+        <h2>Message Us</h2>
+        <div class="format">
+          <div class="form-pesan">
+            <form name="form-msg" onsubmit="return validateform()">
+              <div class="kiri">
+                <label for="">Nama</label>
+                <br />
+                <label for="">Tanggal lahir</label>
+                <br />
+                <label for="">Jenis kelamin</label>
+                <br />
+                <label for="">Pesan</label>
+              </div>
+              <div class="tengah">
+                <b>:</b>
+                <br />
+                <b>:</b>
+                <br />
+                <b>:</b>
+                <br />
+                <b>:</b>
+              </div>
+              <div class="kanan">
+                <input
+                  placeholder="Nama"
+                  type="text"
+                  name="nama"
+                  style="width: 100%"
+                />
+                <br />
+                <input type="date" name="date" style="width: 100%" />
+                <br />
+                <input type="radio" id="male" name="gender" value="Laki-laki" />
+                <label for="male">Laki-laki</label>
+                <input
+                  type="radio"
+                  id="female"
+                  name="gender"
+                  value="Perempuan"
+                />
+                <label for="female">Perempuan</label>
+                <br />
+                <textarea
+                  class="rh"
+                  placeholder="pesan"
+                  name="messages"
+                ></textarea>
+                <br />
+                <input class="rn" type="submit" value="Submit" />
+              </div>
+            </form>
+          </div>
+
+          <script>
+            function validateform() {
+              const today = new Date();
+              const yyyy = today.getFullYear();
+              let mm = today.getMonth() + 1; // Months start at 0!
+              let dd = today.getDate();
+
+              if (dd < 10) dd = "0" + dd;
+              if (mm < 10) mm = "0" + mm;
+
+              const formattedToday = dd + "/" + mm + "/" + yyyy;
+
+              var dt = new Date();
+              var nama = document.forms["form-msg"]["nama"].value;
+              var date = document.forms["form-msg"]["date"].value;
+              var gender = document.forms["form-msg"]["gender"].value;
+              var message = document.forms["form-msg"]["messages"].value;
+
+              if (nama == "" || date == "" || gender == "" || message == "") {
+                alert("Input tidak boleh kosong");
+                return false;
+              }
+
+              document.getElementById("date-time").innerHTML = dt;
+              document.getElementById("nama-sender").innerText = nama;
+              document.getElementById("birthdate").innerText = date =
+                formattedToday;
+              document.getElementById("gender").innerText = gender;
+              document.getElementById("message").innerText = message;
+              return false;
+            }
+          </script>
+
+          <div class="respon">
+            <p>
+              <b>Current time :</b>
+              <span id="date-time"></span>
+              <br />
+              <br />
+              <b>Nama :</b>
+              <span id="nama-sender"></span>
+              <br />
+              <b>Tanggal lahir :</b>
+              <span id="birthdate"></span>
+              <br />
+              <b>Jenis kelamin :</b>
+              <span id="gender"></span>
+              <br />
+              <b>Pesan :</b>
+              <span id="message"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="tutup"></div>
+
+    <div class="footer">
+      <p>Created By Antung Firdaus Nuralif</p>
+    </div>
+  </body>
+</html>
