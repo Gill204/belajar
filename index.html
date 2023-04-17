@@ -19,8 +19,8 @@
       </div>
 
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/">Our Profile</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html">Our Profile</a></li>
         <li><a href="/">Achievement</a></li>
         <li><a href="/">Message Us</a></li>
       </ul>
@@ -51,7 +51,48 @@
         document.getElementById("nama").innerText = nama;
       </script>
       <p class="text">Ini adalah website latihan pertama</p>
-      <div class="banner"></div>
+      <!-- banner slide start -->
+      <div class="slider">
+        <div class="slides">
+          <!-- radio button start -->
+          <input type="radio" name="radio-btn" id="radio1" />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+          <input type="radio" name="radio-btn" id="radio4" />
+          <!-- radio button end -->
+          <!-- slide image start -->
+          <div class="slide first">
+            <img src="img/slide1.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/slide2.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/slide3.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/slide4.png" alt="" />
+          </div>
+          <!-- slide image end -->
+          <!-- auto slide start -->
+          <div class="navigation-auto">
+            <div class="button1a"></div>
+            <div class="button2a"></div>
+            <div class="button3a"></div>
+            <div class="button4a"></div>
+          </div>
+          <!-- auto slide end -->
+        </div>
+        <!-- manual slide start -->
+        <div class="manual-btn">
+          <label for="radio1" class="mnl-btn"></label>
+          <label for="radio2" class="mnl-btn"></label>
+          <label for="radio3" class="mnl-btn"></label>
+          <label for="radio4" class="mnl-btn"></label>
+        </div>
+        <!-- manual slide end -->
+      </div>
+      <!-- banner slide end -->
     </main>
 
     <div class="fasil">

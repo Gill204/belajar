@@ -135,12 +135,99 @@ nav ul.slide {
   padding-bottom: 10px;
 }
 
-.banner {
-  background-image: url(img/10072022---Journal-Refresh-Banner-Kenalan.png);
+.slider {
   width: 100%;
   height: 500px;
-  background-size: cover;
-  border-bottom: solid 2px #42280f;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.slides {
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 100%;
+  height: 500px;
+}
+
+/* manual slide */
+
+.manual-btn {
+  position: absolute;
+  width: 100%;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.mnl-btn {
+  border: 2px solid #088667;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+.mnl-btn:not(:last-child) {
+  margin-right: 40px;
+}
+.mnl-btn:hover {
+  background: #088667;
+}
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+/* automatic navigation */
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div {
+  border: 2px solid #088667;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .button1a {
+  background: #088667;
+}
+#radio2:checked ~ .navigation-auto .button2a {
+  background: #088667;
+}
+#radio3:checked ~ .navigation-auto .button3a {
+  background: #088667;
+}
+#radio4:checked ~ .navigation-auto .button4a {
+  background: #088667;
 }
 
 .fasil h2 {

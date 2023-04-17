@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <link rel="stylesheet" href="profile.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--Nav-Bar-->
+    <nav>
+      <div>
+        <img class="logo" src="img/Logo1.png" alt="Revou-logo" />
+      </div>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html">Our Profile</a></li>
+        <li><a href="/">Achievement</a></li>
+        <li><a href="/">Message Us</a></li>
+      </ul>
+
+      <div class="menu-toggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle input");
+
+      const nav = document.querySelector("nav ul");
+
+      menuToggle.addEventListener("click", function () {
+        nav.classList.toggle("slide");
+      });
+    </script>
+
+    <!--main profile-->
+
+    <div class="container">
+      <div class="cols0">
+        <span class="top">Hello</span>
+        <h2>I'm <span class="multiteks">Student</span></h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad
+          doloremque neque,
+        </p>
+      </div>
+      <div class="cols1">
+        <div class="imagebox">
+          <img src="img/kucing1.png" alt="kucing" />
+        </div>
+      </div>
+    </div>
+
+    <div class="tutup"></div>
+
+    <div class="footer">
+      <p>Created By Antung Firdaus Nuralif</p>
+    </div>
+  </body>
+</html>
