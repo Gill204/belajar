@@ -48,6 +48,7 @@ nav ul li a:hover {
   height: 20px;
   justify-content: space-between;
   position: relative;
+  z-index: 3;
 }
 
 .menu-toggle input {
@@ -98,17 +99,47 @@ nav ul li a:hover {
   nav ul {
     width: 50%;
   }
+  .format {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .gender-details-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 /* ukuran mobile */
 @media screen and (max-width: 576px) {
   .menu-toggle {
     display: flex;
   }
+  .fasil {
+    font-size: 60%;
+    margin: auto;
+  }
+  .fasil-content {
+    margin: auto;
+    padding-right: 80px;
+    justify-content: center;
+    align-items: center;
+    min-height: 10%;
+    flex-direction: column;
+  }
+  .fasil-content span {
+    flex-direction: column;
+  }
+  .footer {
+    min-width: fit-content;
+    font-size: 50%;
+  }
   nav ul {
     position: absolute;
     right: 0;
     top: 0;
-    width: 70%;
+    width: 60%;
     height: 100vh;
     justify-content: space-evenly;
     align-items: center;
@@ -117,6 +148,38 @@ nav ul li a:hover {
     transform: translateX(100%);
     transition: all 1s;
     opacity: 0;
+    z-index: 1;
+  }
+
+  .format {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .form-pesan {
+    min-width: 280px;
+    font-size: 50%;
+  }
+
+  .user-input-box {
+    margin-bottom: 12px;
+    width: 100%;
+  }
+  .gender-details-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  form {
+    size: 50%;
+  }
+
+  .footer {
+    min-width: fit-content;
+    font-size: 50%;
   }
 }
 
@@ -150,12 +213,12 @@ nav ul.slide {
   display: none;
 }
 
-.slide {
+.slidem {
   width: 20%;
   transition: 2s;
 }
 
-.slide img {
+.slidem img {
   width: 100%;
   height: 500px;
 }
@@ -258,6 +321,56 @@ nav ul.slide {
   padding-top: 15px;
   padding-left: 100px;
   box-sizing: border-box;
+}
+
+.main-user-info {
+  padding: 20px 0;
+}
+
+.user-input-box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 10px;
+}
+textarea {
+  width: 100%;
+}
+.user-input-box label {
+  width: 95%;
+  color: #333;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 5px 0;
+}
+
+.user-input-box input {
+  height: 40px;
+  width: 95%;
+  border-radius: 7px;
+  outline: none;
+  border: 1px solid grey;
+  padding: 0 10px;
+}
+
+.gender-details-box {
+  margin: 15px 0;
+  color: #333;
+}
+
+.gender-details-box label {
+  padding: 0 20px 0 5px;
+}
+
+.gender-details-box label,
+.gender-details-box input,
+.rn {
+  cursor: pointer;
+}
+.message .container h2 {
+  padding-top: 15px;
+  padding-left: 25px;
+  padding-bottom: 30px;
 }
 
 form {

@@ -61,16 +61,16 @@
           <input type="radio" name="radio-btn" id="radio4" />
           <!-- radio button end -->
           <!-- slide image start -->
-          <div class="slide first">
+          <div class="slidem first">
             <img src="img/slide1.png" alt="" />
           </div>
-          <div class="slide">
+          <div class="slidem">
             <img src="img/slide2.png" alt="" />
           </div>
-          <div class="slide">
+          <div class="slidem">
             <img src="img/slide3.png" alt="" />
           </div>
-          <div class="slide">
+          <div class="slidem">
             <img src="img/slide4.png" alt="" />
           </div>
           <!-- slide image end -->
@@ -138,49 +138,40 @@
         <div class="format">
           <div class="form-pesan">
             <form name="form-msg" onsubmit="return validateform()">
-              <div class="kiri">
-                <label for="">Nama</label>
-                <br />
-                <label for="">Tanggal lahir</label>
-                <br />
-                <label for="">Jenis kelamin</label>
-                <br />
-                <label for="">Pesan</label>
-              </div>
-              <div class="tengah">
-                <b>:</b>
-                <br />
-                <b>:</b>
-                <br />
-                <b>:</b>
-                <br />
-                <b>:</b>
-              </div>
-              <div class="kanan">
-                <input
-                  placeholder="Nama"
-                  type="text"
-                  name="nama"
-                  style="width: 100%"
-                />
-                <br />
-                <input type="date" name="date" style="width: 100%" />
-                <br />
-                <input type="radio" id="male" name="gender" value="Laki-laki" />
-                <label for="male">Laki-laki</label>
-                <input
-                  type="radio"
-                  id="female"
-                  name="gender"
-                  value="Perempuan"
-                />
-                <label for="female">Perempuan</label>
-                <br />
-                <textarea
-                  class="rh"
-                  placeholder="pesan"
-                  name="messages"
-                ></textarea>
+              <div class="main-user-info">
+                <div class="user-input-box">
+                  <label for="Name"> Nama</label>
+                  <input
+                    type="text"
+                    id="fullName"
+                    name="nama"
+                    placeholder="Masukkan Nama"
+                  />
+                </div>
+                <div class="user-input-box">
+                  <label for="date">Tanggal lahir</label>
+                  <input
+                    type="date"
+                    id="tanggal"
+                    name="date"
+                    placeholder="date"
+                  />
+                </div>
+                <div class="gender-details-box">
+                  <label for="gender">Jenis kelamin</label>
+                  <input type="radio" name="gender" id="male" />
+                  <label for="male">Male</label>
+                  <input type="radio" name="gender" id="female" />
+                  <label for="female">Female</label>
+                </div>
+                <div class="user-input-box">
+                  <label for="pesan">Pesan</label>
+                  <textarea
+                    class="message"
+                    name="messages"
+                    id="pesan"
+                  ></textarea>
+                </div>
                 <br />
                 <input class="rn" type="submit" value="Submit" />
               </div>
