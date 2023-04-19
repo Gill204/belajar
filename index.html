@@ -33,23 +33,10 @@
       </div>
     </nav>
 
-    <script>
-      const menuToggle = document.querySelector(".menu-toggle input");
-
-      const nav = document.querySelector("nav ul");
-
-      menuToggle.addEventListener("click", function () {
-        nav.classList.toggle("slide");
-      });
-    </script>
-
     <!--Banner-->
     <main class="main-content">
       <h2 class="text">Hi <span id="nama"></span>, Welcome to My Website</h2>
-      <script>
-        var nama = prompt("masukkan nama anda");
-        document.getElementById("nama").innerText = nama;
-      </script>
+
       <p class="text">Ini adalah website latihan pertama</p>
       <!-- banner slide start -->
       <div class="slider">
@@ -146,6 +133,7 @@
                     id="fullName"
                     name="nama"
                     placeholder="Masukkan Nama"
+                    required
                   />
                 </div>
                 <div class="user-input-box">
@@ -159,10 +147,20 @@
                 </div>
                 <div class="gender-details-box">
                   <label for="gender">Jenis kelamin</label>
-                  <input type="radio" name="gender" id="male" />
-                  <label for="male">Male</label>
-                  <input type="radio" name="gender" id="female" />
-                  <label for="female">Female</label>
+                  <input
+                    type="radio"
+                    id="male"
+                    name="gender"
+                    value="Laki-laki"
+                  />
+                  <label for="male">Laki-laki</label>
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="Perempuan"
+                  />
+                  <label for="female">Perempuan</label>
                 </div>
                 <div class="user-input-box">
                   <label for="pesan">Pesan</label>
@@ -170,6 +168,7 @@
                     class="message"
                     name="messages"
                     id="pesan"
+                    required
                   ></textarea>
                 </div>
                 <br />
@@ -177,39 +176,6 @@
               </div>
             </form>
           </div>
-
-          <script>
-            function validateform() {
-              const today = new Date();
-              const yyyy = today.getFullYear();
-              let mm = today.getMonth() + 1; // Months start at 0!
-              let dd = today.getDate();
-
-              if (dd < 10) dd = "0" + dd;
-              if (mm < 10) mm = "0" + mm;
-
-              const formattedToday = dd + "/" + mm + "/" + yyyy;
-
-              var dt = new Date();
-              var nama = document.forms["form-msg"]["nama"].value;
-              var date = document.forms["form-msg"]["date"].value;
-              var gender = document.forms["form-msg"]["gender"].value;
-              var message = document.forms["form-msg"]["messages"].value;
-
-              if (nama == "" || date == "" || gender == "" || message == "") {
-                alert("Input tidak boleh kosong");
-                return false;
-              }
-
-              document.getElementById("date-time").innerHTML = dt;
-              document.getElementById("nama-sender").innerText = nama;
-              document.getElementById("birthdate").innerText = date =
-                formattedToday;
-              document.getElementById("gender").innerText = gender;
-              document.getElementById("message").innerText = message;
-              return false;
-            }
-          </script>
 
           <div class="respon">
             <p>
@@ -240,4 +206,6 @@
       <p>Created By Antung Firdaus Nuralif</p>
     </div>
   </body>
+
+  <script src="script.js"></script>
 </html>
